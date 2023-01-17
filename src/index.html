@@ -4,159 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/home_stylesheet.css">
     <title>Home</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#top">
-                <img src="./icons/icons8-school-100.png" alt="our school logo" width="70" height="70">
-            </a>
-            <ul>
-                <li>
-                    <a href="./pages/course.html">courses</a>
+    <header class="header ">
+        <a href="#top"  class="header_logo">
+            <img src="./icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+        </a>
+        <nav class="header_nav">
+            <ul class="header_ul header_nav_pages">
+                <li class="list--item">
+                    <a class="header_ul_link--item" href="./pages/course.html">courses</a>
                 </li>
-                <li>
-                    <a href="./pages/contacts.html">contacts</a>
+                <li class=" list--item">
+                    <a  class="header_ul_link--item" href="./pages/contacts.html">contacts</a>
                 </li>
-                <li>
-                    <a href="/pages/signup.html">register</a>
+                <li class=" list--item">
+                    <a class="header_ul_link--item" href="./pages/signup.html">register</a>
                 </li>
-                <li>
-                    <a href="./blogs/blog.html">blogs</a>
+                <li class=" list--item">
+                    <a class="header_ul_link--item" href="./blogs/blog.html">blogs</a>
                 </li>
-                <li>
-                    <a href="./pages/about_us.html">about us</a>
+                <li class="list--item">
+                    <a class="header_ul_link--item" href="./pages/about_us.html">about us</a>
                 </li>
             </ul>
-            
-          <ul>
-            <li>
-                <a href="https://facebook.com/yonas_engdu"> 
-                    <img src="./icons/facebook.svg" width="100" height="15" alt="link to our facebook page">
-                </a>
-           </li>
-           <li>
-                <a href="https://instagram.com/yonas_engdu">
-                     <img src="./icons/instagram.svg" width="100" height="15" alt="link to our instagram page">
-                </a>
-           </li>
-           <li>
-                <a href="https://linkedin.com/yonas_engdu">
-                    <img src="./icons/linkedin.svg" width="100" height="15" alt="link to our linkedin page">
-                </a>
-
-           </li>
-           <li>
-                <a href="https://twitter.com/yonas_engdu"> 
-                    <img src="./icons/twitter.svg" width="100" height="15" alt="link to twitter page">
-                </a>
-           </li>
-          </ul>
-            <section>
-                <video controls autoplay="">
-                    <source src="./video/Untitled video - Made with Clipchamp (4).mp4">
-                    <track src="./subtitle/Stoic+Life+Lessons+Men+Learn+Too+Late+In+Life++BE+UNSHAKEABLE_am.vtt" label="Amaric"
-                        kind="captions" srclang="en-us" default> 
-                    <track src="./subtitle/Stoic+Life+Lessons+Men+Learn+Too+Late+In+Life++BE+UNSHAKEABLE_en.vtt" label="English"
-                        kind="captions" srclang="en-us" default> 
-                    
-                </video>
-            </section>
+            <div class="humburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
- </header>
-<main>
-    <article>
-        <h1>
-            IT-Study
-            <br>
-            <em>We help to master a promising profession in the field of IT </em> 
-        </h1>
-            <aside>
-                    <img src="./photos/full-stack-web-developer-1024x1024.jpg"  alt="circiute board"  width="100" height="100">
-                    <img src="./photos/Full_Stack_ebvf4s.png" alt="code snippet" width="100" height="100">
-                    <img src="./photos/fullstackdev.png" alt="professor taking with students in the library" width="100" height="100">
-            </aside>
-                <p>
-                    For 10 years we have been engaged in high-quality training of IT specialists. 
-                    We concentrated on several specializations and give consistently excellent results.
-                    Our graduates work in large companies and continue to develop every day.
-                    Each our course is individually designed, includes a lot of practical training and work with a mentor.
-                    We help to study the subject holistically and achieve your goals with fresh thoughts and new skills.
+       
+            <video autoplay muted class="main_section_video video--bg" >
+                <source src="./video/y2mate.com - Welcome to the University of Adelaide_1080p.mp4">  
+            </video>
+      
+    </header>
+    <main class="main">
+    <article class="main_article_appeal">
+        <aside class="main_article_appeal_contents">
+
+                    <h1 class="main_articel_appeal_h1">
+                        IT-Study
+                </h1>
+                <h2 class="main_articel_appeal_h2">
+                    We help to master a promising profession in the field of IT
+                </h2>
+                <p class="main_articel_appeal_history">
+                    <strong>""</strong>
+                       For 10 years we have been engaged in high-quality training of IT specialists. 
+                        We concentrated on several specializations and give consistently excellent results.
+                        Our graduates work in large companies and continue to develop every day.
+                        Each our course is individually designed, includes a lot of practical training and work with a mentor.
+                        We help to study the subject holistically and achieve your goals with fresh thoughts and new skills.
+                    <strong>""</strong>
+                  
                 </p>
-                <a href="./pages/about_us.html">learn more</a>
-                <p>
-                    <strong>
-                        +100000 leared in our school
-                    </strong>
-                </p>
-     </article>
-    <section>
-            <h2>
+                <div class="container main_article_appeal_contents--btn">
+
+                    <a  class="container_link" href="./pages/about_us.html">learn more</a>
+                    <p class="container_stat">
+                        +100000 learned in our school
+                    </p>
+                </div>
+        </aside>
+        <aside class="main_articel_appeal_photos ">
+                <img  class="appeal_photo" src="./photos/collage.png" alt="circiute board">
+ 
+        </aside>
+    </article>
+    <section class="main_section_promotion">
+            <h2 class="main_section_promotion_h2">
                 Ready to start your IT career?
             </h2>
-            <h3>
+            <h3 class="main_section_promotion_h3">
                 We have a large selection of courses that are led by experienced lecturers. 
                 Take the first step to your cherished career! 
             </h3>
-            <aside>
-                <h4>
-                    software Engineering
-                </h4>
-            </aside>
-            <aside>
-                <h4>
-                computer Engineering
-                </h4>
+            <div class="main_section_promotion_shools">
+                <aside class="school--layout">
+                    <h4 class="main_section_promotion_schools_heading ">
+                        software Engineering
+                    </h4>
+                    <ul class="school--layout--list">
+                        <li>Full-stack</li>
+                        <li>Artefical Intelgence</li>
+                        <li>cyber security</li>
+                        <li>Data science</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </aside >
+                <aside class="school--layout">
+                    <h4 class="main_section_promotion_schools_heading ">
+                    computer Engineering
+                    </h4>
+                    <ul class="school--layout--list">
+                        <li>hardware engineering</li>
+                        <li>Telecommunication </li>
+                        <li>Network Management</li>
+                        <li>Communications</li>
+                        <li>Microprocessors</li>
+                        <li>computet maitainace</li>
+                
+                    </ul>
+    
+                </aside>
+                <aside class="main_section_values">
+                    <h4 class="main_section_chooseUs">why you choose us</h4>
+                    <ul class="main_section_values_list">
+                        <li>Team work</li>
+                        <li>Certificate</li>
+                        <li>completed projects</li>
+                        <li>mentoring</li>
+                        <li>Access to library</li>
+                        <li>months of experience</li>
+                    </ul>
+                </aside>
+            </div>
+    
+        </section>
 
-            </aside>
-            <a href="./pages/signup.html">register now </a>
-
-            <h4>why you choose us</h4>
-
-            <aside>
-                <ul>
-                    <li>Team work</li>
-                    <li>Certificate</li>
-                    <li>completed projects</li>
-                    <li>mentoring</li>
-                    <li>Access to library</li>
-                    <li>months of experience</li>
-                </ul>
-            </aside>
+            
         
+        <section class="main_section_testimonial">
 
-            <article>
-
+            <article class="main_section_testimonial_testiomony">
+                
                 <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
-                <h4>
-                    Tofik iman
+                <h4 class="main_section_testimonial_testiomony_name">
+                   imauel kant
                 </h4>
 
                 <p>
-                The educational process is well thought-out. i felt the mentors guidance
-                through every step of the education and gained many skills essentia for my work.
+                    The educational process is well thought-out. i felt the mentors guidance
+                    through every step of the education and gained many skills essentia for my work.
                 </p>
 
             </article>
-            <article>
+            <article class="main_section_testimonial_testiomony">
 
                 <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
-
-                <h4>
+                
+                <h4 class="main_section_testimonial_testiomony_name">
                     Daniel Ayele
                 </h4>
                 <p>
                     I am glad that I chose the ITStudy school among all the IT courses. The lecturers gave me a maximum of knowledge.
                     Having a ready project, I easily found my first job and from the first day I could really use my skills.
                 </p>
-
+                
             </article>
-
-            <article>
+            
+            <article class="main_section_testimonial_testiomony">
                 <img src="./photos/place_holder.png" alt="photo of person giving testimonial" width="100" height="100">
-                <h4>
-                samson haile
+                <h4 class="main_section_testimonial_testiomony_name">
+                    samson haile
                 </h4>
                 <p>
                     our campany is reliable and professional the applies high technology and creates exculisive
@@ -164,39 +168,46 @@
                     continue our fruitful cooperation with them
                 </p>
             </article>
+        </section>
 
-    </section>
-</main>
+        </main>
 
-<footer>
-    <ul>
-        <li>
-            <a href="#">courses</a>
-        </li>
-        <li>
-            <a href="./pages/contacts.html">contacts</a>
-        </li>
-        <li>
-            <a href="#top">
-                <em>
-                   clintons school
-                </em>
-            </a>
-        </li> 
-        <li>
-            <a href="#">register</a>
-        </li>
-        <li>
-            <a href="./pages/about_us.html">about us</a>
-        </li>
-        <li>
-            <a href="./blogs/blog.html">blogs</a>
-        </li>
+<footer class="footer">
+    
+            <ul class="footer_nav">
+                <li>
+                    <a class="footer_nav_list" href="#top">Home</a>
+                </li>
+                <li>
+                    <a class="footer_nav_list" href="./pages/course.html">courses</a>
+                </li>
+                <li>
+                    <a class="footer_nav_list" href="./pages/signup.html">contacts</a>
+                </li>
+                <li>
+                    <a class="footer_nav_logo"href="#top">
+                        IT-Study  
+                    </a>
+                </li>
+                <li>
+                    <a class="footer_nav_list" href="./pages/signup.html">register</a>
+                </li>
+                <li>
+                    <a class="footer_nav_list" href="./pages/about_us.html">about us</a>
+                </li>
+                <li>
+                    <a class="footer_nav_list" href="./blogs/blog.html">blogs</a>
+                </li>
+            </ul>
+  
     </ul>
+</footer> 
+<aside class="copyright">
     <p>
         &copy; All right reserved 
     </p>       
-</footer> 
+</aside>
 
 </body>
+<script src="./scripts/script.js"></script>
 </html>
