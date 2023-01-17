@@ -68,6 +68,25 @@ body{
 }
 
 
+.humburger{
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 5%;
+} 
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+
+}
+
+
+
+
 
 
 
@@ -219,6 +238,46 @@ body{
         list-style: none;
        
     }
+
+    .humburger{
+        display: block;
+        margin: 2%;
+    
+    }
+    .humburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .humburger.active .bar:nth-child(1){
+        transform: translatey(8px) rotate(45deg);
+    }
+    .humburger.active .bar:nth-child(1){
+        transform: translatey(-8px) rotate(-45deg);
+    }
+    .header_nav_pages{
+        position:fixed;
+        top: 10%;
+        gap: 2%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-image:linear-gradient(45deg,#03045e,#0077b6);
+        width: 100%;
+        transition: 0.3s;
+        margin: 0;
+        left: -100%;
+       
+        
+    }
+    .list--item{
+        margin: 16px 0;
+
+    }
+    .header_nav_pages.active{
+        left: 0;
+         
+    }
+
     
     
 }
