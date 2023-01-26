@@ -4,210 +4,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./stylesheets/home_stylesheet.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Home</title>
 </head>
 <body>
-    <header class="header ">
-        <a href="#top"  class="header_logo">
-            <img src="./icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
-        </a>
-        <nav class="header_nav">
-            <ul class="header_ul header_nav_pages">
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./pages/course.html">courses</a>
+    <header class=" overflow-hidden ">
+        
+        <nav class="header_nav  # navbar navbar-expand-lg bg-body-tertiary   ">
+            <div class="container-fluid">
+                <a href="#top"  class="header_logo # navbar-brand ">
+                    <img src="./icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="header_ul header_nav_pages # navbar-nav ">
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/course.html">courses</a>
                 </li>
-                <li class=" list--item">
-                    <a  class="header_ul_link--item" href="./pages/contacts.html">contacts</a>
+                <li class=" list--item # nav-item">
+                    <a  class="header_ul_link--item # nav-link active" href="./pages/contacts.html">contacts</a>
                 </li>
-                <li class=" list--item">
-                    <a class="header_ul_link--item" href="./pages/signup.html">register</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/signup.html">register</a>
                 </li>
-                <li class=" list--item">
-                    <a class="header_ul_link--item" href="./blogs/blog.html">blogs</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./blogs/blog.html">blogs</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./pages/about_us.html">about us</a>
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/about_us.html">about us</a>
                 </li>
             </ul>
-            <div class="humburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </div>
             </div>
         </nav>
        
-            <video autoplay muted class="main_section_video video--bg" >
+            <video autoplay muted class="main_section_video video--bg # vw-100 " >
                 <source src="./video/y2mate.com - Welcome to the University of Adelaide_1080p.mp4">  
             </video>
       
     </header>
-    <main class="main">
-    <article class="main_article_appeal">
-        <aside class="main_article_appeal_contents">
-
-                    <h1 class="main_articel_appeal_h1">
-                        IT-Study
-                </h1>
-                <h2 class="main_articel_appeal_h2">
-                    We help to master a promising profession in the field of IT
-                </h2>
-                <p class="main_articel_appeal_history">
-                    <strong>""</strong>
-                       For 10 years we have been engaged in high-quality training of IT specialists. 
-                        We concentrated on several specializations and give consistently excellent results.
-                        Our graduates work in large companies and continue to develop every day.
-                        Each our course is individually designed, includes a lot of practical training and work with a mentor.
-                        We help to study the subject holistically and achieve your goals with fresh thoughts and new skills.
-                    <strong>""</strong>
-                  
-                </p>
-                <div class="container main_article_appeal_contents--btn">
-
-                    <a  class="container_link" href="./pages/about_us.html">learn more</a>
-                    <p class="container_stat">
-                        +100000 learned in our school
+    <main class="m-5">
+        <article class="d-flex justify-content-between  align-items-center flex-wrap  py-5 my-5 ">
+            <aside class=" w-50 flex-fill">
+                        <h1 class="main_articel_appeal_h1">
+                            IT-Study
+                    </h1>
+                    <h2 class="main_articel_appeal_h2 fs-3">    
+                        We help to master a promising profession in the field of IT
+                    </h2>
+                    <p class="">
+                        <strong>""</strong>
+                            For 10 years we have been engaged in high-quality training of IT specialists. 
+                            We concentrated on several specializations and give consistently excellent results.
+                            Our graduates work in large companies and continue to develop every day.
+                            Each our course is individually designed, includes a lot of practical training and work with a mentor.
+                            We help to study the subject holistically and achieve your goals with fresh thoughts and new skills.
+                        <strong>""</strong>
+                    
                     </p>
-                </div>
-        </aside>
-        <aside class="main_articel_appeal_photos ">
-                <img  class="appeal_photo" src="./photos/collage.png" alt="circiute board">
- 
-        </aside>
-    </article>
+                    <div class="container main_article_appeal_contents--btn">
+
+                        <a  class="container_link" href="./pages/about_us.html">learn more</a>
+                        <p class="container_stat">
+                            +100000 learned in our school
+                        </p>
+                    </div>
+            </aside>
+            <aside class="">
+                    <img  class="w-100" src="./photos/collage.png" alt="circiute board">
+    
+            </aside>
+        </article>
     <section class="main_section_promotion">
-            <h2 class="main_section_promotion_h2">
-                Ready to start your IT career?
-            </h2>
-            <h3 class="main_section_promotion_h3">
-                We have a large selection of courses that are led by experienced lecturers. 
-                Take the first step to your cherished career! 
-            </h3>
-            <div class="main_section_promotion_shools">
-                <aside class="school--layout">
-                    <h4 class="main_section_promotion_schools_heading ">
-                        software Engineering
-                    </h4>
-                    <ul class="school--layout--list">
-                        <li>Full-stack</li>
-                        <li>Artefical Intelgence</li>
-                        <li>cyber security</li>
-                        <li>Data science</li>
-                        <li>UI/UX Design</li>
-                    </ul>
-                </aside >
-                <aside class="school--layout">
-                    <h4 class="main_section_promotion_schools_heading ">
-                    computer Engineering
-                    </h4>
-                    <ul class="school--layout--list">
-                        <li>hardware engineering</li>
-                        <li>Telecommunication </li>
-                        <li>Network Management</li>
-                        <li>Communications</li>
-                        <li>Microprocessors</li>
-                        <li>computet maitainace</li>
-                
-                    </ul>
-    
-                </aside>
-                <aside class="main_section_values">
-                    <h4 class="main_section_chooseUs">why you choose us</h4>
-                    <ul class="main_section_values_list">
-                        <li>Team work</li>
-                        <li>Certificate</li>
-                        <li>completed projects</li>
-                        <li>mentoring</li>
-                        <li>Access to library</li>
-                        <li>months of experience</li>
-                    </ul>
-                </aside>
+           <div class="grid">
+               <h2 class=" py-4">
+                   Ready to start your IT career?
+                </h2>
+                <h3 class="fs-4 align-items-center py-2">
+                    We have a large selection of courses that are led by experienced lecturers. 
+                    Take the first step to your cherished career! 
+                </h3>
             </div>
-    
+            <div class="d-flex justify-content-around  my-5 py-5 flex-wrap">
+                <aside class="card m-2 " style="width: 18rem">
+                    <div class="card-body flex-fill">
+                        <h4 class="main_section_promotion_schools_heading ">
+                            software Engineering
+                        </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Full-stack</li>
+                        <li class="list-group-item">Artefical Intelgence</li>
+                        <li class="list-group-item">cyber security</li>
+                        <li class="list-group-item">Data science</li>
+                        <li class="list-group-item">UI/UX Design</li>
+                      </ul>
+                </aside >
+                <aside class="card m-2" style="width: 18rem">
+                    <div class="card-body">
+                        <h4 class="main_section_promotion_schools_heading ">
+                            computer Engineering
+                        </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">hardware engineering</li>
+                        <li class="list-group-item">Telecommunication </li>
+                        <li class="list-group-item">Network Management</li>
+                        <li class="list-group-item">Communications</li>
+                        <li class="list-group-item">Microprocessors</li>
+                        <li class="list-group-item">computet maitainace</li>
+                      </ul>
+                </aside >
+                <aside class="card m-2" style="width: 18rem">
+                    <div class="card-body">
+                        <h4 class="main_section_promotion_schools_heading ">
+                            why you choose us
+                        </h4>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Team work</li>
+                        <li class="list-group-item">Certificate </li>
+                        <li class="list-group-item">completed projects</li>
+                        <li class="list-group-item">mentoring</li>
+                        <li class="list-group-item">Access to library</li>
+                        <li class="list-group-item">months of experience</li>
+                      </ul>
+                </aside >
+            </div>
+            
         </section>
-
-            
         
-        <section class="main_section_testimonial">
+        
+    <section class="container-fluid my-5 py-5">
+            <div class="row">
 
-            <article class="main_section_testimonial_testiomony">
+                <article class="col mx-2 " >
+
+                        <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
+                        <h4 class="main_section_testimonial_testiomony_name">
+                            imauel kant
+                        </h4>
+                        
+                        <p>
+                            The educational process is well thought-out. i felt the mentors guidance
+                            through every step of the education and gained many skills essentia for my work.
+                        </p>
+                        
+                </article>
+                <article class="col mx-2" >
                 
-                <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
-                <h4 class="main_section_testimonial_testiomony_name">
-                   imauel kant
-                </h4>
 
-                <p>
-                    The educational process is well thought-out. i felt the mentors guidance
-                    through every step of the education and gained many skills essentia for my work.
-                </p>
-
-            </article>
-            <article class="main_section_testimonial_testiomony">
-
-                <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
+                        
+                        <img src="./photos/place_holder.png" alt="photo of a preson giving testimonial" width="100" height="100">
+                        
+                        <h4 class="main_section_testimonial_testiomony_name">
+                            Daniel Ayele
+                        </h4>
+                        <p>
+                            I am glad that I chose the ITStudy school among all the IT courses. The lecturers gave me a maximum of knowledge.
+                            Having a ready project, I easily found my first job and from the first day I could really use my skills.
+                        </p>
+                        
                 
-                <h4 class="main_section_testimonial_testiomony_name">
-                    Daniel Ayele
-                </h4>
-                <p>
-                    I am glad that I chose the ITStudy school among all the IT courses. The lecturers gave me a maximum of knowledge.
-                    Having a ready project, I easily found my first job and from the first day I could really use my skills.
-                </p>
+                </article>
                 
-            </article>
-            
-            <article class="main_section_testimonial_testiomony">
-                <img src="./photos/place_holder.png" alt="photo of person giving testimonial" width="100" height="100">
-                <h4 class="main_section_testimonial_testiomony_name">
-                    samson haile
-                </h4>
-                <p>
-                    our campany is reliable and professional the applies high technology and creates exculisive
-                    programs for the clients.We highly appreciate this approach and will definetely
-                    continue our fruitful cooperation with them
-                </p>
-            </article>
+                <article class="col mx-2" >
+                
+
+                        <img src="./photos/place_holder.png" alt="photo of person giving testimonial" width="100" height="100">
+                        <h4 class="main_section_testimonial_testiomony_name">
+                            samson haile
+                        </h4>
+                        <p>
+                            our campany is reliable and professional the applies high technology and creates exculisive
+                            programs for the clients.We highly appreciate this approach and will definetely
+                            continue our fruitful cooperation with them
+                        </p>
+                    
+                
+                </article>
+
+            </div>
         </section>
 
         </main>
 
-<footer class="footer">
+<footer class="my-5 py-5">
     
-            <ul class="footer_nav">
-                <li>
-                    <a class="footer_nav_list" href="#top">Home</a>
+            <ul class="nav justify-content-around ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#top">Home</a>
                 </li>
-                <li>
-                    <a class="footer_nav_list" href="./pages/course.html">courses</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./pages/course.html">courses</a>
                 </li>
-                <li>
-                    <a class="footer_nav_list" href="./pages/signup.html">contacts</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./pages/signup.html">contacts</a>
                 </li>
-                <li>
-                    <a class="footer_nav_logo"href="#top">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#top">
                         IT-Study  
                     </a>
                 </li>
-                <li>
-                    <a class="footer_nav_list" href="./pages/signup.html">register</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./pages/signup.html">register</a>
                 </li>
-                <li>
-                    <a class="footer_nav_list" href="./pages/about_us.html">about us</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./pages/about_us.html">about us</a>
                 </li>
-                <li>
-                    <a class="footer_nav_list" href="./blogs/blog.html">blogs</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./blogs/blog.html">blogs</a>
                 </li>
             </ul>
   
     </ul>
 </footer> 
-<aside class="copyright">
+<aside class="d-flex justify-content-center">
     <p>
         &copy; All right reserved 
     </p>       
 </aside>
-
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
-<script src="./scripts/script.js"></script>
+
 </html>

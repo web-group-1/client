@@ -5,238 +5,262 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>course</title>
-    <link rel="stylesheet" href="../stylesheets/course_stylesheet.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <header class="header ">
-        <a href="#top"  class="header_logo">
-            <img src=".././icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
-        </a>
-        <nav class="header_nav">
-            <ul class="header_ul header_nav_pages">
-                <li class="list--item">
-                    <a  class="header_ul_link--item" href="../index.html">Home</a>
+    <header class=" overflow-hidden "> 
+        <nav class="navbar navbar-expand-lg bg-body-tertiary   ">
+            <div class="container-fluid">
+                <a href="#top"  class="header_logo # navbar-brand ">
+                    <img src="../icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="header_ul header_nav_pages # navbar-nav ">
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/course.html">courses</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./course.html">courses</a>
+                <li class=" list--item # nav-item">
+                    <a  class="header_ul_link--item # nav-link active" href="./pages/contacts.html">contacts</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./signup.html">register</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/signup.html">register</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../blogs/blog.html">blogs</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./blogs/blog.html">blogs</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./about_us.html">about us</a>
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/about_us.html">about us</a>
                 </li>
             </ul>
-            <div class="humburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </div>
             </div>
         </nav>
-    </header> 
+      
+    </header>
 </body>
 <main class="main">
     <h1 class="main_header">courses we offer</h1>
-    <section class="main_courses">
-        <article class="course--detail">
-            <h2 class="course--detail_title">HTML & CSS</h2>
-            <p class="course--detail_article"> 
-                The Frontend Masters Bootcamp is a complete crash course, and everything you need to get up and running with HTML,
-                CSS and JavaScript. By completing the coursework,you master world of web development
+    <section class="d-flex flex-wrap">
+        <div class="card w-25 ">
+            <article class="card-body  align-self-center">
+                <h2 class="card-title">HTML & CSS</h2>
+                <p class="card-text"> 
+                    The Frontend Masters Bootcamp is a complete crash course, and everything you need to get up and running with HTML,
+                    CSS and JavaScript. By completing the coursework,you master world of web development
                 </p>
-            <ul class="course--detail_list">
-                <li>Basic</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 5PM</li>
-                <li> $ 400
-                </li>
-            </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Javascript</h3>
-            <p class="course--detail_article"> 
-                Learn modern JavaScript (ES2015+) from scratch, and practice in an intuitive environment. 
-                The challenges are inspired by real-world projects to make sure that you're learning the best practices, one step at a time.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>Basic</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 5PM</li>
+                    <li> $ 400 </li>
+                </ul>
+            </article>
+        </div>
+        <div class="card w-25">
+            <article class="card-body">
+                <h2 class="card-title">Javascript</h2>
+                <p class="card-text"> 
+                    Learn modern JavaScript (ES2015+) from scratch, and practice in an intuitive environment. 
+                    The challenges are inspired by real-world projects to make sure that you're learning the best practices, one step at a time.
                 </p>
-            <ul class="course--detail_list">
-                <li>Basic</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 450
-                </li>
-            </ul>
-        </article>
-        <article class=" course--detail">
-           <h3 class="course--detail_title">JS Professional</h3> 
-           <p class="course--detail_article"> 
-            you’ll learn JavaScript you dive deeper into more advanced topics.many fields, 
-            like front- and back-end engineering, game and mobile development, virtual reality, and more
-            </p>
-           <ul class="course--detail_list">
-                <li>senior</li>
-                <li>4 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 500</li>
-        </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Python / Django</h3>
-            <p class="course--detail_article"> 
-                Mastering Django and the Django Rest Framework. Create a blog an an accompanying API 
-                using industry-standard tools and software packages without installing anything!In these four courses,
-                 you will cover everything from the architecting of large web development projects, to the Django REST framework, to task queuing.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>Basic</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 450</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card w-25">
+            <article class="card-body">
+                <h2 class="card-title">JS Professional</h2>
+                <p class="card-text"> 
+                    you’ll learn JavaScript you dive deeper into more advanced topics.many fields, 
+                    like front- and back-end engineering, game and mobile development, virtual reality, and more
                 </p>
-            <ul class="course--detail_list">
-                <li>Basic</li>
-                <li>5 months</li>
-                <li>Sat.-Sun., 11AM</li>
-                <li> $ 500</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Python Adv.</h3>
-            <p class="course--detail_article"> 
-                This course introduces the dictionary data structure and user-defined functions.
-                You’ll learn about local and global variables, optional and keyword parameter-passing, named functions and lambda expressions. 
-                You’ll also learn about Python’s sorted function and how to control the order in which it sorts by passing in another function as an input.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>senior</li>
+                    <li>4 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 500</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">Python / Django</h2>
+                <p class="card-text"> 
+                    Mastering Django and the Django Rest Framework. Create a blog an an accompanying API 
+                    using industry-standard tools and software packages without installing anything!In these four courses,
+                    you will cover everything from the architecting of large web development projects, to the Django REST framework, to task queuing.
                 </p>
-            <ul class="course--detail_list">
-                <li>senior</li>
-                <li>3 months</li>
-                <li>Wed.-Fr., 5PM</li>
-                <li> $ 600</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Java</h3>
-            <p class="course--detail_article"> 
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>Basic</li>
+                    <li>5 months</li>
+                    <li>Sat.-Sun., 11AM</li>
+                    <li> $ 500</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">Python Adv.</h2>
+                <p class="card-text"> 
+                    This course introduces the dictionary data structure and user-defined functions.
+                    You’ll learn about local and global variables, optional and keyword parameter-passing, named functions and lambda expressions. 
+                    You’ll also learn about Python’s sorted function and how to control the order in which it sorts by passing in another function as an input.
+                </p>
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>senior</li>
+                    <li>3 months</li>
+                    <li>Wed.-Fr., 5PM</li>
+                    <li> $ 600</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">Java</h2>
+                <p class="card-text"> 
                 Take your first step towards a career in software development with this introduction to Java—one of the most in-demand programming languages and the foundation of the Android operating system. 
                 Designed for beginners, this Specialization will teach you core programming concepts and equip you to write programs to solve complex problems.
                 </p>
-            <ul class="course--detail_list">
-                <li>middle</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 550</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Web Design</h3>
-            <p class="course--detail_article"> 
-                During the capstone you will develop a professional-quality web portfolio demonstrating your growth as a web developer and your knowledge of accessible web design.
-                This will include your ability to design and implement a responsive site that utilizes tools to create a site that is accessible to a
-                wide audience, including those with visual, audial, physical, and cognitive impairments.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>middle</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 550</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">Web Design</h2>
+                <p class="card-text"> 
+                    During the capstone you will develop a professional-quality web portfolio demonstrating your growth as a web developer and your knowledge of accessible web design.
+                    This will include your ability to design and implement a responsive site that utilizes tools to create a site that is accessible to a
+                    wide audience, including those with visual, audial, physical, and cognitive impairments.
                 </p>
-            <ul class="course--detail_list">
-                <li>Basic</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 450
-                </li>
-            </ul>
-        </article>
-        <article class=" course--detail">
-           <h3 class="course--detail_title">UX Design</h3> 
-           <p class="course--detail_article"> 
-            Get started in the in-demand field of user experience (UX) design with a Professional Certificate from us. 
-            Learn UX foundations and gain experience with the design process,including how to build wireframes and prototypes and conduct user research to test your designs.
-            </p>
-           <ul class="course--detail_list">
-                <li>senior</li>
-                <li>4 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 500</li>
-        </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">UX Research</h3>
-            <p class="course--detail_article"> 
-                Integrate UX Research and UX Design to create great products through understanding user needs, rapidly generating prototypes, 
-                and evaluating design concepts. Learners will gain hands-on experience with taking a product from initial concept, 
-                through user research, ideation and refinement, formal analysis, 
-                prototyping, and user testing, applying perspectives and methods to ensure a great user experience at every step.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>Basic</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 450</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">UX Design</h2>
+                <p class="card-text"> 
+                    Get started in the in-demand field of user experience (UX) design with a Professional Certificate from us. 
+                    Learn UX foundations and gain experience with the design process,including how to build wireframes and prototypes and conduct user research to test your designs.
                 </p>
-            <ul class="course--detail_list">
-                <li>Basic</li>
-                <li>5 months</li>
-                <li>Sat.-Sun., 11AM</li>
-                <li> $ 500</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">UI Animation</h3>
-            <p class="course--detail_article"> 
-                Computer graphics can be a powerful tool for supporting visual problem solving, and interactivity plays a central role in harnessing the users' creativity. 
-                This course will introduce various interactive tools developed in computer graphics research field with their design rationales and algorithms
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>senior</li>
+                    <li>4 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 500</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">UX Research</h2>
+                <p class="card-text"> 
+                    Integrate UX Research and UX Design to create great products through understanding user needs, rapidly generating prototypes, 
+                    and evaluating design concepts. Learners will gain hands-on experience with taking a product from initial concept, 
+                    through user research, ideation and refinement, formal analysis, 
+                    prototyping, and user testing, applying perspectives and methods to ensure a great user experience at every step.
                 </p>
-            <ul class="course--detail_list">
-                <li>senior</li>
-                <li>3 months</li>
-                <li>Wed.-Fr., 5PM</li>
-                <li> $ 600</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Mobile App Design</h3>
-            <p class="course--detail_article"> 
-                This course is an ideal stepping stone if you want to become a mobile developer. 
-                We’ll introduce you to this career path and give you a high-level overview of programming and the tools needed to develop Android applications. 
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>Basic</li>
+                    <li>5 months</li>
+                    <li>Sat.-Sun., 11AM</li>
+                    <li> $ 500</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">UI Animation</h2>
+                <p class="card-text"> 
+                    Computer graphics can be a powerful tool for supporting visual problem solving, and interactivity plays a central role in harnessing the users' creativity. 
+                    This course will introduce various interactive tools developed in computer graphics research field with their design rationales and algorithms.
                 </p>
-            <ul class="course--detail_list">
-                <li>middle</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 550</li>
-           </ul>
-        </article>
-        <article class=" course--detail">
-            <h3 class="course--detail_title">Visual Design</h3>
-            <p class="course--detail_article"> 
-                The goal of this specialization is to equip learners with a set of transferable formal and conceptual tools for “making and communicating” in the field of graphic design.
-                 This core skill set will equip learners for formal studies in graphic design, and a starting point for further work in interface design, motion graphics, and editorial design.
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>senior</li>
+                    <li>3 months</li>
+                    <li>Wed.-Fr., 5PM</li>
+                    <li> $ 600</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card  w-25">
+            <article class="card-body">
+                <h2 class="card-title">Mobile App Design</h2>
+                <p class="card-text"> 
+                    This course is an ideal stepping stone if you want to become a mobile developer. 
+                    We’ll introduce you to this career path and give you a high-level overview of programming and the tools needed to develop Android applications.
                 </p>
-            <ul class="course--detail_list">
-                <li>middle</li>
-                <li>3 months</li>
-                <li>Mon.-Fr., 7PM</li>
-                <li> $ 550</li>
-           </ul>
-        </article>
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>middle</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 550</li>
+                </ul>
+            </article>
+        </div>
+        <div class="card   w-25 ">
+            <article class="card-body">
+                <h2 class="card-title">Visual Design</h2>
+                <p class="card-text"> 
+                    The goal of this specialization is to equip learners with a set of transferable formal and conceptual tools for “making and communicating” in the field of graphic design.
+                    This core skill set will equip learners for formal studies in graphic design, and a starting point for further work in interface design, motion graphics, and editorial design.
+                </p>
+                <ul class="card-subtitle mb-2 text-muted">
+                    <li>middle</li>
+                    <li>3 months</li>
+                    <li>Mon.-Fr., 7PM</li>
+                    <li> $ 550</li>
+                </ul>
+            </article>
+        </div>
     </section>
 </main>
-<footer class="footer">
+<footer class="my-5 py-5">
     
-    <ul class="footer_nav">
-        <li>
-            <a class="footer_nav_list" href="../index.html">Home</a>
+    <ul class="nav justify-content-around ">
+        <li class="nav-item">
+            <a class="nav-link active" href="#top">Home</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./course.html">courses</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./pages/course.html">courses</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./contacts.html">contacts</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./pages/signup.html">contacts</a>
         </li>
-        <li>
-            <a class="footer_nav_logo"href="#top">
+        <li class="nav-item">
+            <a class="nav-link active" href="#top">
                 IT-Study  
             </a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="../pages/signup.html">register</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./pages/signup.html">register</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./about_us.html">about us</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./pages/about_us.html">about us</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="../blogs/blog.html">blogs</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./blogs/blog.html">blogs</a>
         </li>
     </ul>
-  
-  </ul>
-  </footer> 
+
+</ul>
+</footer> 
   <script src="../scripts/script.js"></script>
   </body>
 

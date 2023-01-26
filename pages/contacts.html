@@ -5,38 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contacts</title>
-    <link rel="stylesheet" href="../stylesheets/contacts_stylesheet.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <header class="header ">
-        <a href="#top"  class="header_logo">
-            <img src=".././icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
-        </a>
-        <nav class="header_nav">
-            <ul class="header_ul header_nav_pages">
-                <li class="list--item">
-                    <a  class="header_ul_link--item" href="../index.html">Home</a>
+    <header class=" overflow-hidden "> 
+        <nav class="navbar navbar-expand-lg bg-body-tertiary   ">
+            <div class="container-fluid">
+                <a href="#top"  class="header_logo # navbar-brand ">
+                    <img src="../icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="header_ul header_nav_pages # navbar-nav ">
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/course.html">courses</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./course.html">courses</a>
+                <li class=" list--item # nav-item">
+                    <a  class="header_ul_link--item # nav-link active" href="./pages/contacts.html">contacts</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="/pages/signup.html">register</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/signup.html">register</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../blogs/blog.html">blogs</a>
+                <li class=" list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./blogs/blog.html">blogs</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./about_us.html">about us</a>
+                <li class="list--item # nav-item">
+                    <a class="header_ul_link--item # nav-link active" href="./pages/about_us.html">about us</a>
                 </li>
             </ul>
-            <div class="humburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </div>
             </div>
         </nav>
-    </header>   
+      
+    </header> 
     <main class="main">
         
         <section class="main_contacts">
