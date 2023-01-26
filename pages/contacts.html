@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <header class=" overflow-hidden "> 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary   ">
+    <header class="overflow-hidden ">     
+        <nav class="header_nav  # navbar navbar-expand-lg bg-body-tertiary   ">
             <div class="container-fluid">
                 <a href="#top"  class="header_logo # navbar-brand ">
                     <img src="../icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
@@ -19,47 +19,47 @@
                 </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="header_ul header_nav_pages # navbar-nav ">
-                <li class="list--item # nav-item">
-                    <a class="header_ul_link--item # nav-link active" href="./pages/course.html">courses</a>
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="../index.html">Home</a>
                 </li>
-                <li class=" list--item # nav-item">
-                    <a  class="header_ul_link--item # nav-link active" href="./pages/contacts.html">contacts</a>
+                <li class="  nav-item">
+                    <a  class=" nav-link active" href="./course.html">course</a>
                 </li>
-                <li class=" list--item # nav-item">
-                    <a class="header_ul_link--item # nav-link active" href="./pages/signup.html">register</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="./signup.html">register</a>
                 </li>
-                <li class=" list--item # nav-item">
-                    <a class="header_ul_link--item # nav-link active" href="./blogs/blog.html">blogs</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="../blogs/">blogs</a>
                 </li>
-                <li class="list--item # nav-item">
-                    <a class="header_ul_link--item # nav-link active" href="./pages/about_us.html">about us</a>
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="./about_us.html">about us</a>
                 </li>
             </ul>
             </div>
             </div>
         </nav>
-      
-    </header> 
+       
+    </header>
     <main class="main">
         
         <section class="main_contacts">
-            <h1 class="main_contacts_title">contacts</h1>
-                <address class="main_contacts_address">
-                    <ul class="main_contacts_address address--list">
+            <h1 class="text-center m-5">contacts</h1>
+                <address class="d-flex justify-content-between flex-sm-wrap text-center m-5 ">
+                    <ul class="list-unstyled">
                         <li>
                             where we are 
                             <br>
                             Addis ababa  Ethiopia
                         </li>
                     </ul>
-                    <ul class="main_contacts_address address--list">
+                    <ul class="list-unstyled">
                             <li>
                                 call us
                                 <br>
                                 +251 924300064
                             </li>
                     </ul>
-                    <ul class="main_contacts_address address--list">
+                    <ul class="list-unstyled">
                             
                         <li>
                             write us
@@ -69,68 +69,70 @@
                         </li>
                     </ul>
                 </address>
-            </section>
-       <aside class="main_aside_map-form">
-        <iframe class="main_aside_map"
+        </section>
+       <aside class="d-flex flex-wrap justify-content-around align-items-center overflow-scroll">
+        <iframe class=""
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28811.9111956004!2d38.77632696887816!3d8.914853415597454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2set!4v1672084185945!5m2!1sen!2set" 
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
        </iframe>
-       <div class="form-main">
+       <div class=" w-50 my-5">
         <div class="form-div">
-          <form class="form" id="form1">
+            <form>
+                <div class="form-outline mb-4">
+                  <input type="text" id="form4Example1" class="form-control" />
+                  <label class="form-label" for="form4Example1">Name</label>
+                </div>
+              
             
-            <p class="name">
-              <input name="name" type="text" class="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Name" id="name" />
-            </p>
+                <div class="form-outline mb-4">
+                  <input type="email" id="form4Example2" class="form-control" />
+                  <label class="form-label" for="form4Example2">Email address</label>
+                </div>
+              
             
-            <p class="email">
-              <input name="email" type="text" class="validate[required,custom[email]] feedback-input" id="email" placeholder="Email" />
-            </p>
-            
-            <p class="text">
-              <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="comment" placeholder="Comment"></textarea>
-            </p>
-            
-            
-            <div class="submit">
-              <input type="submit" value="SEND" id="button-blue"/>
-              <div class="ease"></div>
-            </div>
-          </form>
+                <div class="form-outline mb-4">
+                  <textarea class="form-control" id="form4Example3" rows="4"></textarea>
+                  <label class="form-label" for="form4Example3">Message</label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
+              </form>
+              
         </div>
     </aside>   
-<footer class="footer">
+
+
+    <footer class="my-5 py-5">
+        <ul class="nav justify-content-around ">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./course.html">courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#top">contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">
+                    IT-Study  
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./signup.html">register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./about_us.html">about us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../blogs/blog.html">blogs</a>
+            </li>
+        </ul>
     
-    <ul class="footer_nav">
-        <li>
-            <a class="footer_nav_list" href="../index.html">Home</a>
-        </li>
-        <li>
-            <a class="footer_nav_list" href="./course.html">courses</a>
-        </li>
-        <li>
-            <a class="footer_nav_list" href="./contacts.html">contacts</a>
-        </li>
-        <li>
-            <a class="footer_nav_logo"href="#top">
-                IT-Study  
-            </a>
-        </li>
-        <li>
-            <a class="footer_nav_list" href="./signup.html">register</a>
-        </li>
-        <li>
-            <a class="footer_nav_list" href="./about_us.html">about us</a>
-        </li>
-        <li>
-            <a class="footer_nav_list" href="../blogs/blog.html">blogs</a>
-        </li>
     </ul>
-  
-  </ul>
-  </footer> 
+    </footer>  
     </main>
-    <script src="../scripts/script.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
  </Body>
 </html>
