@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".././stylesheets/blog_stylesheet.css">
     <title>Blog</title>
-    <link rel="stylesheet" href="../stylesheets/blog_stylesheet.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <header class="header ">
-        <a href="#top"  class="header_logo">
-            <img src=".././icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
-        </a>
-        <nav class="header_nav">
-            <ul class="header_ul header_nav_pages">
-                <li class="list--item">
-                    <a  class="header_ul_link--item" href="../index.html">Home</a>
+    <header class=" overflow-hidden ">
+        
+        <nav class="header_nav  # navbar navbar-expand-lg bg-body-tertiary   ">
+            <div class="container-fluid">
+                <a href="#top"  class="header_logo # navbar-brand ">
+                    <img src="../icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="header_ul header_nav_pages # navbar-nav ">
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="../index.html">Home</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../pages/contacts.html">contacts</a>
+                <li class="  nav-item">
+                    <a  class=" nav-link active" href="./contacts.html">contacts</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../pages/signup.html">register</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="./signup.html">register</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../pages/course.html">courses</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="../blogs/blog.html">blogs</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../pages/about_us.html">about us</a>
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="./about_us.html">about us</a>
                 </li>
             </ul>
-            <div class="humburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </div>
             </div>
         </nav>
+       
     </header>
- <main class="main">
-        <section class="main_section_blog">
+ <main class="d-flex flex-wrap align-items-center justify-content-around">
+        <section class="w-50 flex-fill m-5">
                  <h1>
                   Blogs
                 </h1>
@@ -94,90 +97,100 @@
                 <strong class="main_section_blog_article_author">written by jon doe</strong> 
             </article>
         </section>
-        <aside class="main_aside_podcast ">
+        <aside class="flex-fill m-5 ">
             <h1 class="main_aside_podcast_header">
                 Mothly podcasts
             </h1>
-            <article class="main_aside_podcast_section">
-                <h2 class="main_aside_podcast_title">
-                    improvement
-                </h2>
-                <audio  class="main_aside_podcast_audio" controls>
-                        <source src="../podcast/Record-20.wav">
-                </audio>
-                <details class="podcast_transcript">
+            <div class="card my-5">
+                <div class="card-body">
+                  <h5 class="card-title">improvement</h5>
+                  <p class="card-text">
+                    <audio  class="main_aside_podcast_audio" controls>
+                      <source src="../podcast/Record-20.wav">
+                    </audio> 
+                  </p>
+              
+                  <button type="button" class="btn btn-primary">Button</button>
+                  <details class="podcast_transcript">
                     <summary> Transcript</summary>
                     <p>
                         this podcast talks about the power of time management
                     </p>
-
+              
                 </details>
-            </article>
-            <article class="main_aside_podcast_section">
-                <h2 class="main_aside_podcast_title">
-                      holiday
-                </h2>
-                <audio   class="main_aside_podcast_audio" controls>
+                </div>
+              </div>
+              <div class="card  my-5">
+                <div class="card-body">
+                  <h5 class="card-title"> tech</h5>
+                  <p class="card-text">
+                    <audio   class="main_aside_podcast_audio" controls>
                         <source src="../podcast/Record-23.wav">
-                </audio>
-                <details class="podcast_transcript">
+                    </audio>
+                  </p>
+              
+                  <button type="button" class="btn btn-primary">Button</button>
+                  <details class="podcast_transcript">
                     <summary> Transcript</summary>
                     <p>
                         this podcast talks about the power of tech
                     </p>
 
                 </details>
-            </article>
-            <article class="main_aside_podcast_section">
-                <h2 class="main_aside_podcast_title">
-                      thought
-                </h2>
-                <audio  class="main_aside_podcast_audio"  controls>
+                </div>
+              </div>
+              <div class="card  my-5">
+                <div class="card-body">
+                  <h5 class="card-title">thought</h5>
+                  <p class="card-text">
+                    <audio  class="main_aside_podcast_audio"  controls>
                         <source src="../podcast/Record-26.wav">
-                </audio>
-                <details class="podcast_transcript">
-                    <summary> Transcript</summary>
-                   
+                    </audio>
+                  </p>
+              
+                  <button type="button" class="btn btn-primary">Button</button>
+                  <details class="podcast_transcript">
+                    <summary> Transcript</summary>              
                     <p>
                         this podcast talks about the power of tech
                     </p>
-
                 </details>
-            </article>
+                </div>
+              </div>    
                 
         </aside>      
      </main>
   
-     <footer class="footer">
+     <footer class="my-5 py-5">
     
-        <ul class="footer_nav">
-            <li>
-                <a class="footer_nav_list" href="../index.html">Home</a>
+        <ul class="nav justify-content-around ">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
             </li>
-            <li>
-                <a class="footer_nav_list" href="../pages/course.html">courses</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="#top">courses</a>
             </li>
-            <li>
-                <a class="footer_nav_list" href="../pages/contacts.html">contacts</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="./contacts.html">contacts</a>
             </li>
-            <li>
-                <a class="footer_nav_logo"href="#top">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">
                     IT-Study  
                 </a>
             </li>
-            <li>
-                <a class="footer_nav_list" href="../pages/signup.html">register</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="./signup.html">register</a>
             </li>
-            <li>
-                <a class="footer_nav_list" href="../pages/about_us.html">about us</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="./about_us.html">about us</a>
             </li>
-            <li>
-                <a class="footer_nav_list" href="./blog.html">blogs</a>
+            <li class="nav-item">
+                <a class="nav-link active" href="../blogs/blog.html">blogs</a>
             </li>
         </ul>
-      
-      </ul>
-      </footer> 
-      <script src="../scripts/script.js"></script>
+    
+    </ul>
+    </footer> 
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
  </body>
 </html>
