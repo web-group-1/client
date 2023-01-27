@@ -9,28 +9,83 @@
 </head>
 <body>
 <main class="w-25">
+  <form>
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example1" class="form-control" />
+          <label class="form-label" for="form6Example1">First name</label>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-outline">
+          <input type="text" id="form6Example2" class="form-control" />
+          <label class="form-label" for="form6Example2">Last name</label>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form6Example3" class="form-control" />
+      <label class="form-label" for="form6Example3">Password</label>
+    </div>
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="form6Example4" class="form-control" />
+      <label class="form-label" for="form6Example4">Confirm Password</label>
+    </div>
+  
 
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">improvement</h5>
-    <p class="card-text">
-      <audio  class="main_aside_podcast_audio" controls>
-        <source src="../podcast/Record-20.wav">
-      </audio> 
-    </p>
+    <div class="form-outline mb-4">
+      <label>Gender</label>
+      <div class="custom_select">
+        <select>
+          <option value="">Gender</option>
+          <option value="male">Male</option>
+        <option value="female">Female</option>
+        </select>
+      </div>
+   </div> 
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form6Example5" class="form-control" />
+      <label class="form-label" for="form6Example5">Email</label>
+    </div>
+  
+    <!-- Number input -->
+    <div class="form-outline mb-4">
+      <input type="number" id="form6Example6" class="form-control" />
+      <label class="form-label" for="form6Example6">Phone</label>
+    </div>
 
-    <button type="button" class="btn btn-primary">Button</button>
-    <details class="podcast_transcript">
-      <summary> Transcript</summary>
-      <p>
-          this podcast talks about the power of time management
-      </p>
-
-  </details>
-  </div>
-</div>
+    <div class="form-outline mb-4">
+      <select>
+        <option value="">choose course</option>
+        <option value="male">full-stack</option>
+        <option value="female">Data-analysis</option>
+        <option value="male">mobile</option>
+        <option value="female">Arteficial intelgence</option>
+        <option value="male">IT-networking</option>
+        <option value="female">computer-design</option>
+      </select>
+    </div>
+    </div>
+  
+    <!-- Checkbox -->
+    <div class="form-check d-flex justify-content-center mb-4">
+      <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked />
+      <label class="form-check-label" for="form6Example8"> Agreed to terms and conditions</label>
+    </div>
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">register</button>
+  </form>
   
 </main>
+
 
 
 </article>

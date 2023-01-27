@@ -5,67 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="../stylesheets/sign_up_stylesheet.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
 <body>
-    <header class="header ">
-        <a href="#top"  class="header_logo">
-            <img src=".././icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
-        </a>
-        <nav class="header_nav">
-            <ul class="header_ul header_nav_pages">
-                <li class="list--item">
-                    <a  class="header_ul_link--item" href="../index.html">Home</a>
+    <header class=" overflow-hidden ">
+        
+        <nav class="header_nav  # navbar navbar-expand-lg bg-body-tertiary   ">
+            <div class="container-fluid">
+                <a href="#top"  class="header_logo # navbar-brand ">
+                    <img src="../icons/icons8-school-100.png" alt="our school logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="header_ul header_nav_pages # navbar-nav ">
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="../index.html">Home</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./course.html">courses</a>
+                <li class="  nav-item">
+                    <a  class=" nav-link active" href="./contacts.html">contacts</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="/pages/signup.html">register</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="./signup.html">register</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="../blogs/blog.html">blogs</a>
+                <li class="  nav-item">
+                    <a class=" nav-link active" href="../blogs/blog.html">blogs</a>
                 </li>
-                <li class="list--item">
-                    <a class="header_ul_link--item" href="./about_us.html">about us</a>
+                <li class=" nav-item">
+                    <a class=" nav-link active" href="./about_us.html">about us</a>
                 </li>
             </ul>
-            <div class="humburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            </div>
             </div>
         </nav>
+       
     </header> 
- <main class="main">
+ <main class=" d-flex justify-content-around align-items-center">
     <div class="main_header">
         <h1 class="main_header title">Register today</h1>
         <p class="main_header paragraph">we offer highly demending course ,Don't miss a chance</p>
     </div>
-    <section class="form_container">
-        <div class="wrapper">
-            <form class="form">
-               <div class="inputfield">
-                  <label>First Name</label>
-                  <input type="text" class="input input-first-name">
-               </div>  
-               <div class="error error-first-name"></div>
-                <div class="inputfield">
-                  <label>Last Name</label>
-                  <input type="text" class="input input-last-name">
-               </div> 
-               <div class="error  error-last-name"></div> 
-               <div class="inputfield">
-                  <label>Password</label>
-                  <input type="password" class="input input-password">
-               </div> 
-               <div class="error  error-password"></div> 
-              <div class="inputfield">
-                  <label>Confirm Password</label>
-                  <input type="password" class="input input-confirm-password">
-               </div> 
-               <div class="error  error-confirm-password"></div>
-                <div class="inputfield">
+    <section class="">
+        <div class="w-50">
+            <form class="">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example1" class="form-control" />
+                      <label class="form-label" for="form6Example1">First name</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input type="text" id="form6Example2" class="form-control" />
+                      <label class="form-label" for="form6Example2">Last name</label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form6Example3" class="form-control" />
+                  <label class="form-label" for="form6Example3">Password</label>
+                </div>
+              
+                <!-- Text input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form6Example4" class="form-control" />
+                  <label class="form-label" for="form6Example4">Confirm Password</label>
+                </div>
+              
+            
+                <div class="form-outline mb-4">
                   <label>Gender</label>
                   <div class="custom_select">
                     <select>
@@ -75,19 +88,19 @@
                     </select>
                   </div>
                </div> 
-                <div class="inputfield input-control">
-                  <label>Email Address</label>
-                  <input type="text" class="input input-email">
-               </div> 
-               <div class="error error-email"></div>
-              <div class="inputfield">
-                  <label>Phone Number</label>
-                  <input type="text" class="input input-phone-number">
-               </div>
-               <div class="error error-phone-number"></div> 
-               <div class="inputfield">
-                <label>course</label>
-                <div class="custom_select">
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form6Example5" class="form-control" />
+                  <label class="form-label" for="form6Example5">Email</label>
+                </div>
+              
+                <!-- Number input -->
+                <div class="form-outline mb-4">
+                  <input type="number" id="form6Example6" class="form-control" />
+                  <label class="form-label" for="form6Example6">Phone</label>
+                </div>
+            
+                <div class="form-outline mb-4">
                   <select>
                     <option value="">choose course</option>
                     <option value="male">full-stack</option>
@@ -98,52 +111,50 @@
                     <option value="female">computer-design</option>
                   </select>
                 </div>
-             </div>
-              <div class="inputfield terms">
-                  <label class="check">
-                    <input type="checkbox">
-                    <span class="checkmark"></span>
-                  </label>
-                  <p>Agreed to terms and conditions</p>
-               </div> 
-              <div class="inputfield">
-                <input type="submit" value="Register" class="btn submit">
-              </div>
-            </form>
+                </div>
+              
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked />
+                  <label class="form-check-label" for="form6Example8"> Agreed to terms and conditions</label>
+                </div>
+              
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">register</button>
+              </form>
         </div>
     </section>
  </main>
- <footer class="footer">
+ <footer class="my-5 py-5">
     
-    <ul class="footer_nav">
-        <li>
-            <a class="footer_nav_list" href="../index.html">Home</a>
+    <ul class="nav justify-content-around ">
+        <li class="nav-item">
+            <a class="nav-link active" href="../index.html">Home</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./course.html">courses</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="#top">courses</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./contacts.html">contacts</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./contacts.html">contacts</a>
         </li>
-        <li>
-            <a class="footer_nav_logo"href="#top">
+        <li class="nav-item">
+            <a class="nav-link active" href="../index.html">
                 IT-Study  
             </a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="../pages/signup.html">register</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./signup.html">register</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="./about_us.html">about us</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="./about_us.html">about us</a>
         </li>
-        <li>
-            <a class="footer_nav_list" href="../blogs/blog.html">blogs</a>
+        <li class="nav-item">
+            <a class="nav-link active" href="../blogs/blog.html">blogs</a>
         </li>
     </ul>
-    <script src="../scripts/validate.js"></script>
-  
-  </ul>
-  </footer> 
+
+</ul>
+</footer>
 </body>
-<script src="../scripts/script.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </html>
