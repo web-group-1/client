@@ -46,83 +46,76 @@
         <h1 class="main_header title">Register today</h1>
         <p class="main_header paragraph">we offer highly demending course ,Don't miss a chance</p>
     </div>
-    <section class="">
-        <div class="w-50">
-            <form class="">
-                <!-- 2 column grid layout with text inputs for the first and last names -->
-                <div class="row mb-4">
-                  <div class="col">
-                    <div class="form-outline">
-                      <input type="text" id="form6Example1" class="form-control" />
-                      <label class="form-label" for="form6Example1">First name</label>
+    <section class=" m-5 p-5">
+          <div class="form-body">
+            <div class="row">
+                <div class="form-holder">
+                    <div class="form-content">
+                        <div class="form-items">
+                            <p>Fill in the data below.</p>
+                            <form class="requires-validation" novalidate>
+          
+                                <div class="col-md-12">
+                                   <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                                   <div class="valid-feedback">Username field is valid!</div>
+                                   <div class="invalid-feedback">Username field cannot be blank!</div>
+                                </div>
+          
+                                <div class="col-md-12">
+                                    <input class="form-control" type="email" name="email" placeholder="E-mail Address" required>
+                                     <div class="valid-feedback">Email field is valid!</div>
+                                     <div class="invalid-feedback">Email field cannot be blank!</div>
+                                </div>
+          
+                               <div class="col-md-12">
+                                    <select class="form-select mt-3" required>
+                                          <option selected disabled value="">select school</option>
+                                          <option value="jweb">software Engineering</option>
+                                          <option value="sweb">Electrical Engineering</option>
+                                          <option value="pmanager">Project Manager</option>
+                                   </select>
+                                    <div class="valid-feedback">You selected a position!</div>
+                                    <div class="invalid-feedback">Please select a position!</div>
+                               </div>
+        
+                               <div class="col-md-12">
+                                  <input class="form-control" type="password" name="password" placeholder="Password" required>
+                                   <div class="valid-feedback">Password field is valid!</div>
+                                   <div class="invalid-feedback">Password field cannot be blank!</div>
+                               </div>
+          
+          
+                               <div class="col-md-12 mt-3">
+                                <label class="mb-3 mr-1" for="gender">Gender: </label>
+          
+                                <input type="radio" class="btn-check" name="gender" id="male" autocomplete="off" required>
+                                <label class="btn btn-sm btn-outline-secondary" for="male">Male</label>
+          
+                                <input type="radio" class="btn-check" name="gender" id="female" autocomplete="off" required>
+                                <label class="btn btn-sm btn-outline-secondary" for="female">Female</label>
+          
+                                <input type="radio" class="btn-check" name="gender" id="secret" autocomplete="off" required>
+                                <label class="btn btn-sm btn-outline-secondary" for="secret">Secret</label>
+                                   <div class="valid-feedback mv-up">You selected a gender!</div>
+                                    <div class="invalid-feedback mv-up">Please select a gender!</div>
+                                </div>
+          
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                              <label class="form-check-label">I confirm that all data are correct</label>
+                             <div class="invalid-feedback">Please confirm that the entered data are all correct!</div>
+                            </div>
+                      
+          
+                                <div class="form-button mt-3">
+                                    <button id="submit" type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-outline">
-                      <input type="text" id="form6Example2" class="form-control" />
-                      <label class="form-label" for="form6Example2">Last name</label>
-                    </div>
-                  </div>
                 </div>
-              
-                <!-- Text input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="form6Example3" class="form-control" />
-                  <label class="form-label" for="form6Example3">Password</label>
-                </div>
-              
-                <!-- Text input -->
-                <div class="form-outline mb-4">
-                  <input type="text" id="form6Example4" class="form-control" />
-                  <label class="form-label" for="form6Example4">Confirm Password</label>
-                </div>
-              
-            
-                <div class="form-outline mb-4">
-                  <label>Gender</label>
-                  <div class="custom_select">
-                    <select>
-                      <option value="">Gender</option>
-                      <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    </select>
-                  </div>
-               </div> 
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form6Example5" class="form-control" />
-                  <label class="form-label" for="form6Example5">Email</label>
-                </div>
-              
-                <!-- Number input -->
-                <div class="form-outline mb-4">
-                  <input type="number" id="form6Example6" class="form-control" />
-                  <label class="form-label" for="form6Example6">Phone</label>
-                </div>
-            
-                <div class="form-outline mb-4">
-                  <select>
-                    <option value="">choose course</option>
-                    <option value="male">full-stack</option>
-                    <option value="female">Data-analysis</option>
-                    <option value="male">mobile</option>
-                    <option value="female">Arteficial intelgence</option>
-                    <option value="male">IT-networking</option>
-                    <option value="female">computer-design</option>
-                  </select>
-                </div>
-                </div>
-              
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form6Example8" checked />
-                  <label class="form-check-label" for="form6Example8"> Agreed to terms and conditions</label>
-                </div>
-              
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">register</button>
-              </form>
-        </div>
+            </div>
+          </div>
     </section>
  </main>
  <footer class="my-5 py-5">
@@ -157,4 +150,5 @@
 </footer>
 </body>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="../scripts/validate.js"></script>
 </html>
