@@ -53,25 +53,32 @@
                     <div class="form-content">
                         <div class="form-items">
                             <p>Fill in the data below.</p>
-                            <form class="requires-validation" novalidate>
+                            <form class="requires-validation" id="register" novalidate>
           
                                 <div class="col-md-12">
-                                    <label class="form-label" for="form4Example0">Full Name</label>
-                                   <input class="form-control" id="form4Example0" type="text" name="name" placeholder="Full Name" required>
+                                    <label class="form-label" for="form4Example0">First Name</label>
+                                   <input class="form-control firstname" id="form4Example0" type="text" name="name" placeholder="First Name" required>
+                                   <div class="valid-feedback">Username field is valid!</div>
+                                   <div class="invalid-feedback">Username field cannot be blank!</div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label class="form-label" for="form4Example0">Last Name</label>
+                                   <input class="form-control lastname" id="form4Example4" type="text" name="name" placeholder="Last Name" required>
                                    <div class="valid-feedback">Username field is valid!</div>
                                    <div class="invalid-feedback">Username field cannot be blank!</div>
                                 </div>
           
                                 <div class="col-md-12">
                                     <label class="form-label" for="form4Example1">Email</label>
-                                    <input class="form-control" id="form4Example1" type="email" name="email" placeholder="E-mail Address" required>
+                                    <input class="form-control email" id="form4Example1" type="email" name="email" placeholder="E-mail Address" required>
                                      <div class="valid-feedback">Email field is valid!</div>
                                      <div class="invalid-feedback">Email field cannot be blank!</div>
                                 </div>
           
                                <div class="col-md-12">
                                    <label class="form-label" for="form4Example2">school</label>
-                                    <select id="form4Example2" class="form-select mt-3" required>
+                                    <select id="form4Example2" class="form-select mt-3 school" required>
                                           <option selected disabled value="">select school</option>
                                           <option value="jweb">software Engineering</option>
                                           <option value="sweb">Electrical Engineering</option>
@@ -82,8 +89,8 @@
                                </div>
         
                                <div class="col-md-12">
-                                <label class="form-label" for="form4Example3">password</label>
-                                  <input class="form-control" id="form4Example3" type="password" name="password" placeholder="Password" required>
+                                <label class="form-label"  for="form4Example3">password</label>
+                                  <input class="form-control password" id="form4Example3" type="password" name="password" placeholder="Password" required>
                                    <div class="valid-feedback">Password field is valid!</div>
                                    <div class="invalid-feedback">Password field cannot be blank!</div>
                                </div>
@@ -154,6 +161,7 @@
 </ul>
 </footer>
 </body>
+<script src="../scripts/register.js"></script>
 <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 <script src="../scripts/validate.js"></script>
 </html>
