@@ -18,6 +18,13 @@ async function Registration(e){
             password:password
         })
     })
-    .then((res)=> res.json())
-    .then((data)=>console.log(data))
+    .then((res)=> {
+        console.log(res.status)
+        if (res.status === '201'|| 201) {
+        alert('User created successfully');
+        window.setTimeout(() => {
+            location.assign('../index.html');
+        }, 1500)}
+        });
 }
+
