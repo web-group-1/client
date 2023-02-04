@@ -24,7 +24,7 @@ async function Registration(e){
         alert('User created successfully');
         window.setTimeout(() => {
             location.assign('../index.html');
-        }, 1500)}
+        }, 700)}
         });
 }
 
