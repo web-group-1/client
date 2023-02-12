@@ -310,10 +310,10 @@ async function updateUser(){
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
-        firstName:"hello",
-        lastName:"how are you",
-        email:"qwert@gmail.com",
-        password:"12345678"
+        firstName:firstName,
+        lastName:lastName,
+        email:emailAddress,
+        password:password
       }),
     })
       .then((res)=> {
