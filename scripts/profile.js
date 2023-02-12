@@ -12,9 +12,18 @@ window.onload = () => {
   if(token) {
     getprofilepage()
   } else {
-    window.location.replace("../pages/signin.html")
-  }
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'you are not signed in!',
+  
+    })
+    window.setTimeout(() => {
+      window.location.replace("../pages/signin.html")
+  }, 1000)
 }
+}
+
 
 
 if (courses_created){
@@ -114,18 +123,16 @@ async function getprofilepage(){
           console.log("what on earth")
     document.getElementById('output').innerHTML = output;
     // the following function is going to call after the above htnl code id filled to the page
-    console.log("just before afterfetched")
+    // console.log("just before afterfetched")
     afterFetched();
     })
         
     } catch (error) {
         console.log(error)
-        console.log("cannot fetch");
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
-            footer: '<a href="">Why do I have this issue?</a>'
+            text: 'Something went wrong!'
           })
     }
     
@@ -325,7 +332,7 @@ async function update(e){
           if (res.status === '201'|| 201) {
               Swal.fire(
                   'Good job!',
-                  'You clicked the button!',
+                  'operation successfull!',
                   'success'
                 );
           window.setTimeout(() => {
