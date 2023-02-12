@@ -49,9 +49,13 @@ async function getprofilepage(){
     .then((res)=>res.json())
     .then((data)=>{
         let output = '';
-        console.log(data);
+        console.log({data,});
+        if(data.status == 400 || data.status == 401) {
+          window.location.replace("../pages/signin.html")
+        }
         let element = data;
         localStorage.setItem('userId', element.id);
+        console.log("heyyyyyy")
         output += 
             `<section class="h-100 gradient-custom-2 ">
             <div class="container py-5 h-100">
@@ -82,22 +86,18 @@ async function getprofilepage(){
                     <div class="card-body p-4 text-black">
                       
                       <div class="d-flex justify-content-between align-items-center mb-4">
-                        <button class="lead fw-normal mb-0 btn btn-warning" id="courses_created">Created Courses</button>
+                        <button class="lead fw-normal mb-0 btn btn-warning" id="mycourses">My courses</button> 
                       </div>
-                      <div id="cretedcourses"></div>
-                      <div class="d-flex justify-content-between align-items-center mb-4">
-                        <button class="lead fw-normal mb-0 btn btn-warning" id="courses_registered">Registered Courses</button> 
-                      </div>
-                      <div id="registeredcourses"></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>   
           </section> `
+          console.log("what on earth")
     document.getElementById('output').innerHTML = output;
-    document.getElementById("profile--landing").style.visibility = "hidden";
     // the following function is going to call after the above htnl code id filled to the page
+    console.log("just before afterfetched")
     afterFetched();
     })
         
@@ -244,16 +244,19 @@ setUpUpdateForm()
 
 
 function afterFetched(){
+  console.log("in afterfetched")
     let  courses_created =  document.getElementById("courses_created");
-    let courses_registered = document.getElementById("courses_registered");
+    let Mycourses = document.getElementById("mycourses");
     let profile_edit = document.getElementById("profile_edit");
-     console.log(courses_created);
+     console.log({profile_edit,});
 
      if (courses_created){
     courses_created.addEventListener('click',getCoursesCreated)
     }
-    if (courses_registered){
-    courses_registered.addEventListener('click',getCoursesRegistered)
+    if (Mycourses){
+    Mycourses.addEventListener('click',()=>{
+      window.location.replace("../pages/mycourses.html")
+    })
     }
     if (profile_edit){
       profile_edit.addEventListener('click',profileEdit)
@@ -281,12 +284,10 @@ async function update(e){
   e.preventDefault()
   let firstName = document.getElementById("form4Example0").value;
   let lastName = document.getElementById("form4Example4").value;
-  let password = document.getElementById("form4Example3").value;
   let emailAddress = document.getElementById("form4Example1").value;
   console.log(firstName);
   console.log(lastName);
   console.log(emailAddress);
-  console.log(password);
   try {
 
     /*javascript frontend with fetch api that can send value to the Nestjs api controller for userupdate*/
@@ -300,7 +301,6 @@ async function update(e){
         firstName:firstName,
         lastName:lastName,
         email:emailAddress,
-        password:password
       }),
     })
       .then((res)=> {
