@@ -1,8 +1,9 @@
 let token = localStorage.getItem('token');
     console.log({"token":token});
 
-let coursesBtn = document.getElementById("courses_btn");
-coursesBtn.addEventListener('click',getallcourses);
+window.onload = () => {
+      getallcourses()
+  }
 
 
 async function getallcourses(){
