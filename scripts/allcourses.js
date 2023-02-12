@@ -1,3 +1,6 @@
+let token = localStorage.getItem('token');
+    console.log({"token":token});
+
 let coursesBtn = document.getElementById("courses_btn");
 coursesBtn.addEventListener('click',getallcourses);
 
@@ -18,7 +21,7 @@ async function getallcourses(){
             <ul>
             <li class="list-group-item active "  aria-current="true" id="courseID">${element.id}</li>
             </ul>
-            <button type="button" class="btn btn-warning" id="courseRegistration">Register</button>
+            <button type="button" class="btn btn-warning" id="courseRegistration" onclick="registerForCourse(${element.id})">Register</button>
         </div>  `
         });
     document.getElementById('output').innerHTML = output;
@@ -52,4 +55,29 @@ async  function courseRegistrationf(e){
             id:c_id
         })
     })
+ }
+
+ async function registerForCourse(courseId) {
+    try {
+        const result =  await fetch(`http://localhost:3000/courses/${courseId}/users/me`,{
+            method:'PATCH',
+            headers: {
+                'Accept':'Application/json,text/plain,*/*',
+                'content-type':'application/json; charset=utf-8',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then((res)=>res.json())
+        .then((data)=>{
+            console.log({data,})
+            if(data.statusCode != 401) {
+                window.location.replace("../pages/mycourses.html")
+            } else {
+                window.location.replace("../pages/signin.html")
+            }
+        })    
+        } catch (error) {
+            console.log(error)
+            
+        }
  }

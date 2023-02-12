@@ -33,7 +33,6 @@ async function deleteCourse(courseID){
             'content-type':'application/json; charset=utf-8',
             'Authorization': `Bearer ${token}`
         }
-       
     })
     .then((res)=>res.json())
     .then(async (data)=>{
@@ -43,7 +42,7 @@ async function deleteCourse(courseID){
     } catch (error) {
         console.log(error)
         
-    }
+    }   
 }
 
 window.onload = async ()=>{
