@@ -67,18 +67,35 @@ async function getprofilepage(){
                         <img  class = "rounded-circle" src="../photos/profilespacehold.svg"
                           alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                           style="width: 150px; z-index: 1">
-                          <button type="button" class="btn btn-outline-dark m-2 shadow-lg p-1 mb-5 bg-body rounded" id="profile_edit" data-mdb-ripple-color="dark"
-                          style="z-index: 1;">
-                          Edit profile
-                        </button>
+
+                            
                       </div>
+                      
                       <div class="ms-3 m-5">
                         <h5>${element.firstName}  ${element.lastName}</h5>
                         <p>${element.emailAddress}</p>
                       </div>
-                      
+                
                     </div>
-                    <div class="m-3" id="profile_edit_form"></div>
+
+                    <div class="d-flex mx-4">
+                            <button type="button" class="btn btn-outline-dark m-2 shadow-lg p-1 mb-5 bg-body rounded" id="profile_edit" data-mdb-ripple-color="dark"
+                            style="z-index: 1;">
+                            Edit profile
+                            </button>
+
+                            <button type="button" class="btn btn-outline-dark m-2 shadow-lg p-1 mb-5 bg-body rounded" id="logout" onclick="logout()" data-mdb-ripple-color="dark"
+                            style="z-index: 1;">
+                            logout
+                            </button>
+                            
+                            <button type="button" class="btn btn-outline-danger m-2 shadow-lg p-1 mb-5 bg-body rounded" id="delete_user" onclick="deleteUser()" data-mdb-ripple-color="dark"
+                            style="z-index: 1;">
+                            delete account
+                            </button>
+                          </div>
+
+                    <div class="" id="profile_edit_form"></div>
                     <div class="p-4 text-black bg-light" >
                       <div class="d-flex justify-content-end text-center"> 
                       </div>
@@ -334,5 +351,11 @@ async function update(e){
       
   }
  
+}
+
+function logout() {
+  localStorage.setItem("token","");
+  console.log({"token": localStorage.getItem("token")})
+  window.location.replace("../pages/signin.html")
 }
 
