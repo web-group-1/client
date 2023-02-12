@@ -1,6 +1,34 @@
 let token = localStorage.getItem('token');
     console.log({"token":token});
 
+const addCourseBtn = document.getElementById("add_course_btn")
+const courseName = document.getElementById("course_name")
+const courseDesc = document.getElementById("course_description")
+
+addCourseBtn.addEventListener("click", addCourse)
+
+function addCourse() {
+    const result = fetch('http://localhost:3000/courses',{
+        method:'POST',
+        headers:{
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+        },
+        body:JSON.stringify({
+            name:courseName.value,
+            description:courseDesc.value
+        })
+    }).then((res)=>{
+        //getCoursesCreated();
+    })
+}
+
+console.log({
+    addCourseBtn,
+    courseName,
+    courseDesc,
+})
+
 window.onload = async ()=>{
     console.log({"token_in":token});
     if (token){
@@ -42,8 +70,6 @@ async function getCoursesCreated(userId){
                 <button type="button" class="btn btn-primary col mx-2" id="course_edit" onclick="editCourseForm(${course.id})">edit</button>
                 <button type="button" class="btn btn-danger col mx-2" id="course_delete" onclick="deleteCourse(${course.id})">delete</button>
                 </div>
-                
-            
             </div>  `
             });   
         }
@@ -103,8 +129,7 @@ async function getUserId(){
     .then((data)=>{
         let output = '';
         userId = data.id
-    })
-        
+    })    
     } catch (error) {
         console.log(error)
         console.log("cannot fetch");
@@ -116,4 +141,8 @@ async function getUserId(){
           })
     }
     return userId
+}
+
+function showCourseForm() {
+
 }

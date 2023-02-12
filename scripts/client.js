@@ -57,10 +57,17 @@ async function signIn(e){
         })
         .then((res)=>res.json())
     .then((data)=>{
+        if (! data.token){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'please try again!'
+              })
+            return;
+        }
         console.log({"receivedToken": data.token});
         let token = data.token;  
         localStorage.setItem('token', token);
-
         console.log({"saved_token":localStorage.getItem('token')})
         Swal.fire(
             'Good job!',
