@@ -7,10 +7,11 @@
     <title>Register</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/profilepage.css">
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js" defer></script>
+
 </head>
 <body>
     <header class=" overflow-hidden gradient-custom-2 ">
-        
         <nav class="header_nav  # navbar navbar-expand-lg bg-body-tertiary gradient-custom-2  ">
             <div class="container-fluid">
                 <a href="#top"  class="header_logo # navbar-brand ">
@@ -46,56 +47,42 @@
        
     </header> 
 
+    <div id="output"></div>
+    <nav class="nav nav-pills flex-column flex-sm-row m-5 justify-content-center" id="profile--landing">
+        <button class="flex-sm-fill text-sm-center nav-link active m-1"  id="profile-page" aria-current="page" href="#">show profile-page</button>
+        <a class="flex-sm-fill text-sm-center nav-link active text-center" aria-current="page" href="../pages/signin.html">sign in</a>
+      </nav>
 
-<section class="h-100 gradient-custom-2 ">
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-lg-9 col-xl-7">
-          <div class="card">
-            <div class="rounded-top text-dark d-flex flex-row bg-warning" style="height:200px;">
-              <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px;">
-                <img  class = "rounded-circle" src="../photos/profilespacehold.svg"
-                  alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
-                  style="width: 150px; z-index: 1">
-                  <button type="button" class="btn btn-outline-dark m-2 shadow-lg p-1 mb-5 bg-body rounded" data-mdb-ripple-color="dark"
-                  style="z-index: 1;">
-                  Edit profile
-                </button>
-              </div>
-              <div class="ms-3 m-5">
-                <h5>Full name</h5>
-                <p>description</p>
-              </div>
-            </div>
-            <div class="p-4 text-black bg-light" >
-              <div class="d-flex justify-content-end text-center">
-                
-                <div class="px-3 card   shadow-lg p-3 mb-5 bg-body rounded">
-                  <p class="mb-1 h5">0</p>
-                  <p class="small text-muted mb-0">Created Courses</p>
-                </div>
-                <div class="card  m-1 shadow-lg p-3 mb-5 bg-body rounded">
-                  <p class="mb-1 h5">0</p>
-                  <p class="small text-muted mb-0">Registered Courses</p>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-4 text-black">
-              
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <button class="lead fw-normal mb-0 btn btn-warning">Created Courses</button>
-              </div>
-              <div class="d-flex justify-content-between align-items-center mb-4">
-                <button class="lead fw-normal mb-0 btn btn-warning">Registered Courses</button>
-                
-              </div>
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <footer class="my-5 py-5">
+        <ul class="nav justify-content-around ">
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./course.html">courses</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#top">contacts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../index.html">
+                    IT-Study  
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./signup.html">register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./about_us.html">about us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="../blogs/blog.html">blogs</a>
+            </li>
+        </ul>
+    </ul>
+    </footer>  
+
+  <script src="../scripts/profile.js" defer></script>
+  <!-- <script src="../scripts/client.js"></script> -->
 </body>
 </html>

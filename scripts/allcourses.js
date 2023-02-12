@@ -16,7 +16,7 @@ async function getallcourses(){
                     ${element.description} </p>
             </article>
             <ul>
-            <li class="list-group-item active "  aria-current="true">${element.id}</li>
+            <li class="list-group-item active "  aria-current="true" id="courseID">${element.id}</li>
             </ul>
             <button type="button" class="btn btn-warning" id="courseRegistration">Register</button>
         </div>  `
@@ -29,9 +29,15 @@ async function getallcourses(){
 
 
 
- let courseRegistration = getElementById("courseRegistration");
- courseRegistration.addEventListener('click',courseRegistrationf);
- let c_id = courseId.value;
+ let courseRegistration = document.getElementById("courseRegistration");
+ if (courseRegistration){
+    courseRegistration.addEventListener('click',courseRegistrationf);
+ }
+
+ let courseID = document.getElementById("courseId")
+ 
+ let c_id = courseID && courseID.value;
+ console.log(c_id);
 
 
 async  function courseRegistrationf(e){
