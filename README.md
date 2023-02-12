@@ -6,7 +6,7 @@
  - HANAMARIAM YEHUALA            UGR/9409/13
 
 ## How to clone and run this app on a computer
-1. clone both the back-end and front-end repository
+1. clone both the back-end and client repositories
 2. install all the dependancies with `yarn install`
 3. migrate the prisma schema to the database with `npx prisma migrate dev` and generate prisma client classes with `npx prisma generate`
 4. run the server with `yarn start`
