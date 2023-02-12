@@ -5,6 +5,18 @@ let courses_registered = document.getElementById("courses_registered");
 console.log(courses_created);
 let API_URL= 'http://localhost:3000';
 
+let token = localStorage.getItem('token');
+console.log({"token at the top":token});
+
+window.onload = () => {
+  if(token) {
+    getprofilepage()
+  } else {
+    window.location.replace("../pages/signin.html")
+  }
+}
+
+
 if (courses_created){
     courses_created.addEventListener('click',getCoursesCreated)
 }
@@ -19,23 +31,11 @@ if (profile_page){
 
 
 
-let secondOperation = false;
-
-let userId=1;
-let firstName = "first name";
-let lastName = "last name"
-let emailAddress = "useremail";
-let password ="";
 
 
-
-
-let token = localStorage.getItem('token');
-console.log(token);
 // token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEzLCJlbWFpbCI6InRlc3QxQGdtYWlsLmNvbSIsImlhdCI6MTY3NjEzNTU2MiwiZXhwIjoxNjc2MTM5MTYyfQ.QmCkiUQKHU-XmChyj8if77xfTeux2onaI1pTKYd_PiY'
 
-async function getprofilepage(e){
-    e.preventDefault()
+async function getprofilepage(){
     try {
     const result =  await fetch('http://localhost:3000/users/me',{
         method:'GET',
@@ -51,14 +51,7 @@ async function getprofilepage(e){
         let output = '';
         console.log(data);
         let element = data;
-        userId = element.id;
-        firstName = element.firstName;
-        lastName = element.lastName;
-        emailAddress = element.emailAddress;
-        localStorage.setItem('userId', userId);
-        localStorage.setItem('firstNamee', firstName);
-        localStorage.setItem('lastName', lastName);
-        localStorage.setItem('emailAddress', emailAddress);
+        localStorage.setItem('userId', element.id);
         output += 
             `<section class="h-100 gradient-custom-2 ">
             <div class="container py-5 h-100">
@@ -141,14 +134,13 @@ async function getCoursesCreated(){
     .then((data)=>{
         console.log(data.created);
         // data = JSON.parse(data.created);
-        data = data.created;
-        console.log(data);
+        // data = data.created;
+        console.log(data.created);
         let output = " <div class='card mx-auto' style='width: 10rem;'><div class='card-body'><h5 class='card-title'>you havenot any creted course</h5><p class='card-text'></p><a href='#' class='btn btn-danger'>0</a></div></div>";
-        if (data){
+        if (data.created.length){
           output = ''
-            data.forEach(element => {
-              console.log(element);
-                
+          data.created.forEach(element => {
+              console.log(element); 
                 output += 
                 `<div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded " style="width: 18rem; margin: 20px;">
                 <article class="card-body  align-self-center">
@@ -177,12 +169,12 @@ async function getCoursesRegistered(){
         }
     }).then((res)=>res.json())
     .then((data)=>{
-        data = data.egisteredFor;
-        console.log(data);
+        // data = data.registeredFor;
+        console.log(data.registeredFor);
         let output = " <div class='card mx-auto' style='width: 10rem;'><div class='card-body'><h5 class='card-title'>you haven't registered for a courses</h5><p class='card-text'></p><a href='#' class='btn btn-danger'>0</a></div></div>";
-        if (data){
-            data.forEach(element => {
-                output = ''
+        if (data.registeredFor.length){
+            output = ''
+            data.registeredFor.forEach(element => {
                 output += 
                 `<div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded " style="width: 18rem; margin: 20px;">
                 <article class="card-body  align-self-center">
@@ -196,79 +188,57 @@ async function getCoursesRegistered(){
                 <button type="button" class="btn btn-warning" id="courseRegistration">Register</button>
             </div>  `
             });   
-        }
-        
+        }  
     document.getElementById('registeredcourses').innerHTML = output;
     })
 }
 
 function profileEdit(){
   // profile_edit_form
-  document.getElementById('profile_edit_form').innerHTML = `<section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+  document.getElementById('profile_edit_form').innerHTML = `<section class=" m-5 py-5 flex-fill">
+  <div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <p>Fill in the data below.</p>
+                    <form class="requires-validation" id="register" novalidate>
+  
+                        <div class="col-md-12">
+                            <label class="form-label" for="form4Example0">First Name</label>
+                           <input class="form-control firstname" id="form4Example0" type="text" name="name" placeholder="First Name" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">update user</p>
-
-                <form class="mx-1 mx-md-4">
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="form3Example1cupdate" class="form-control" />
-                      <label class="form-label" for="form3Example1cupdate">first Name</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                  <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                  <div class="form-outline flex-fill mb-0">
-                    <input type="text" id="form3Example1c2update" class="form-control" />
-                    <label class="form-label" for="form3Example1c2update">last Name</label>
-                  </div>
+                        <div class="col-md-12">
+                            <label class="form-label" for="form4Example0">Last Name</label>
+                           <input class="form-control lastname" id="form4Example4" type="text" name="name" placeholder="Last Name" required>
+                           <div class="valid-feedback">Username field is valid!</div>
+                           <div class="invalid-feedback">Username field cannot be blank!</div>
+                        </div>
+  
+                        <div class="col-md-12">
+                            <label class="form-label" for="form4Example1">Email</label>
+                            <input class="form-control email" id="form4Example1" type="email" name="email" placeholder="E-mail Address" required>
+                             <div class="valid-feedback">Email field is valid!</div>
+                             <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>       
+                       
+              
+  
+                        <div class="form-button mt-3">
+                            <button id="button_update" type="submit" class="btn btn-primary">update</button>
+                        </div>
+                    </form>
                 </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="form3Example3cupdate" class="form-control" />
-                      <label class="form-label" for="form3Example3cupdate">your Email</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="form3Example4cupdate" class="form-control" />
-                      <label class="form-label" for="form3Example4cupdate">Password</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="button" id="button_update" class="btn btn-primary btn-lg">update</button>
-                  </div>
-                </form>
-
-              </div>
-              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  class="img-fluid" alt="Sample image">
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
   </div>
-</section>`
-
-updateUser();
-
+</section>
+`
+setUpUpdateForm()
 }
 
 
@@ -290,19 +260,36 @@ function afterFetched(){
     }
 }
 
-async function updateUser(){
-  
-  firstName = document.getElementById("form3Example1cupdate").value;
-  lastName = document.getElementById("form3Example1c2update").value;
-  email = document.getElementById("form3Example3cupdate").value;
-  password = document.getElementById("form3Example4cupdate").value;
+
+
+
+
+async function setUpUpdateForm(){
+  console.log("on the setU[UpdateForm function");
 
  let button_update = document.getElementById("button_update");
  if (button_update){
-  button_update.addEventListener('click',async (e)=>{
-    e.preventDefault();
-    try {
-      /*javascript frontend with fetch api that can send value to the Nestjs api controller for userupdate*/
+  console.log("button update is found");
+  console.log(button_update)
+  button_update.addEventListener('click',update)
+ }
+}
+
+
+
+async function update(e){
+  e.preventDefault()
+  let firstName = document.getElementById("form4Example0").value;
+  let lastName = document.getElementById("form4Example4").value;
+  let password = document.getElementById("form4Example3").value;
+  let emailAddress = document.getElementById("form4Example1").value;
+  console.log(firstName);
+  console.log(lastName);
+  console.log(emailAddress);
+  console.log(password);
+  try {
+
+    /*javascript frontend with fetch api that can send value to the Nestjs api controller for userupdate*/
     const response = await fetch(`http://localhost:3000/users/me`, {
       method: 'PATCH',
       headers: {
@@ -318,8 +305,7 @@ async function updateUser(){
     })
       .then((res)=> {
           console.log(res.status)
-          console.log(res)
-          if (res.status === 200) {
+          if (res.status === '201'|| 201) {
               Swal.fire(
                   'Good job!',
                   'You clicked the button!',
@@ -338,7 +324,8 @@ async function updateUser(){
           }
           });
       
-  }catch (error) {
+  } catch (error) {
+    console.log(error)
       Swal.fire({
           icon: 'error',
           title: 'Oops...',
@@ -346,10 +333,6 @@ async function updateUser(){
         })
       
   }
-
-  })
- }
-
-
+ 
 }
 
