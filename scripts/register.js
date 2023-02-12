@@ -20,35 +20,39 @@ async function Registration(e){
                 password:password
             })
         })
-        .then((res)=> {
-            console.log(res.status)
-            if (res.status === '201'|| 201) {
-                Swal.fire(
-                    'Good job!',
-                    'You clicked the button!',
-                    'success'
-                  );
-            window.setTimeout(() => {
-                location.assign('../index.html');
-            }, 700)}
-            else{
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'please try again!',
-                
-                  })
-            }
-            });
-        
+        .then((res)=>res.json())
+    .then(async (data)=>{
+            console.log(data.token);
+            localStorage.setItem("token",data.token);
+            console.log({data,})
+            if (data.token) {
+                    Swal.fire(
+                        'Good job!',
+                        'You have registered successfully!',
+                        'success'
+                      );
+
+                      window.setTimeout(() => {
+                            location.assign('../index.html');
+                        }, 700)
+            
+            
+    }else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Email is already registered!'
+          })
+    }
+})
     } catch (error) {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'please try again!'
           })
-        
     }
-   
 }
 
+
+ 
