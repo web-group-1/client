@@ -14,13 +14,10 @@ async function getallcourses(){
             output += 
             `<div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded " style="width: 18rem; margin: 20px;">
             <article class="card-body  align-self-center">
-                <h2 class="card-title">${element.name}</h2>
+                <h2 class="card-title">${element.id} ${element.name}</h2>
                 <p class="card-text"> 
                     ${element.description} </p>
             </article>
-            <ul>
-            <li class="list-group-item active "  aria-current="true" id="courseID">${element.id}</li>
-            </ul>
             <button type="button" class="btn btn-warning" id="courseRegistration" onclick="registerForCourse(${element.id})">Register</button>
         </div>  `
         });
@@ -81,3 +78,4 @@ async  function courseRegistrationf(e){
             
         }
  }
+

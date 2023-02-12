@@ -113,14 +113,11 @@ async function getCoursesRegistered(userId){
                 output += 
                 `<div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded " style="width: 18rem; margin: 20px;">
                 <article class="card-body  align-self-center">
-                    <h2 class="card-title">${element.name}</h2>
+                    <h2 class="card-title">${element.id} ${element.name}</h2>
                     <p class="card-text"> 
                         ${element.description} </p>
                 </article>
-                <ul>
-                <li class="list-group-item active "  aria-current="true" id="courseID">${element.id}</li>
-                </ul>
-                <button type="button" class="btn btn-warning" id="courseRegistration">Register</button>
+                <button type="button" class="btn btn-warning" id="courseRegistration" onclick="unregisterForCourse(${element.id})">Unregister</button>
             </div>  `
             });   
         }  
@@ -149,13 +146,31 @@ async function getUserId(){
     } catch (error) {
         console.log(error)
         console.log("cannot fetch");
-        Swal.fire({
-            icon: 'error',
-            title: 'Oops...',
-            text: 'Something went wrong!',
-            footer: '<a href="">Why do I have this issue?</a>'
-          })
     }
     return userId
 }
 
+async function unregisterForCourse(courseId) {
+    try {
+        const result =  await fetch(`http://localhost:3000/courses/${courseId}/users/me`,{
+            method:'DELETE',
+            headers: {
+                'Accept':'Application/json,text/plain,*/*',
+                'content-type':'application/json; charset=utf-8',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then((res)=>res.json())
+        .then(async (data)=>{
+            console.log({data,})
+            if(data.statusCode != 401) {
+                getCoursesRegistered(await getUserId())
+            } else {
+                window.location.replace("../pages/signin.html")
+            }
+        })    
+        } catch (error) {
+            console.log(error)
+            
+        }
+ }
