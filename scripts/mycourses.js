@@ -23,11 +23,28 @@ function addCourse() {
     })
 }
 
-console.log({
-    addCourseBtn,
-    courseName,
-    courseDesc,
-})
+async function deleteCourse(courseID){
+    console.log({courseID,})
+    try {
+    const result =  await fetch(`http://localhost:3000/courses/${courseID}`,{
+        method:'DELETE',
+        headers: {
+            'Accept':'Application/json,text/plain,*/*',
+            'content-type':'application/json; charset=utf-8',
+            'Authorization': `Bearer ${token}`
+        }
+       
+    })
+    .then((res)=>res.json())
+    .then(async (data)=>{
+        console.log(data);
+        getCoursesCreated(await getUserId())
+    })    
+    } catch (error) {
+        console.log(error)
+        
+    }
+}
 
 window.onload = async ()=>{
     console.log({"token_in":token});
@@ -143,6 +160,3 @@ async function getUserId(){
     return userId
 }
 
-function showCourseForm() {
-
-}
